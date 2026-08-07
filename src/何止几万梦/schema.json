@@ -2,6 +2,32 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "properties": {
+    "_玩家设定": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "状态": {
+          "default": "未填写",
+          "type": "string",
+          "enum": [
+            "未填写",
+            "已填写",
+            "已跳过"
+          ]
+        },
+        "档案": {
+          "default": {},
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "description": "玩家设定字段"
+          },
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      }
+    },
     "世界": {
       "default": {},
       "type": "object",
