@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --surface-page: transparent;
+  --surface-paper: #f8f7f2;
+  --surface-raised: #ffffff;
+  --surface-muted: #ebe9e3;
+  --surface-screen: #dce3d8;
+  --surface-screen-strong: #cbd7c7;
+  --ink-primary: #29252d;
+  --ink-secondary: #665f6d;
+  --ink-muted: #827b86;
+  --line-strong: #4e405a;
+  --line-soft: #c8c3ca;
+  --accent-primary: #625071;
+  --accent-primary-strong: #44334f;
+  --accent-primary-soft: #ddd5e3;
+  --accent-signal: #39766f;
+  --accent-signal-soft: #d8ebe6;
+  --accent-warm: #9b664e;
+  --shadow-frame: rgba(48, 38, 55, 0.17);
+  --font-ui: 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', sans-serif;
+  --font-data: 'Lucida Console', Consolas, 'Courier New', monospace;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  background: var(--surface-page);
+  color: var(--ink-primary);
+  font-family: var(--font-ui);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+body {
+  padding: 2px;
+}
+
+button {
+  font: inherit;
+}
+
+button,
+[role='tab'] {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: var(--accent-primary-soft);
+  color: var(--ink-primary);
+}
+
+@media (max-width: 520px) {
+  html,
+  body {
+    font-size: 13px;
+  }
+
+  body {
+    padding: 1px;
+  }
+}

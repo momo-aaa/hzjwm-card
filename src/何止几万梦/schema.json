@@ -1,0 +1,271 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "世界": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "日期": {
+          "default": "2010-09-11",
+          "type": "string"
+        },
+        "时间段": {
+          "default": "上午近十一点",
+          "type": "string"
+        },
+        "当前地点": {
+          "default": {},
+          "type": "object",
+          "properties": {
+            "city": {
+              "default": "金陵市",
+              "type": "string"
+            },
+            "campus": {
+              "default": "华立中央大学",
+              "type": "string"
+            },
+            "area": {
+              "default": "鹤林校区",
+              "type": "string"
+            },
+            "detail": {
+              "default": "大学生活动中心一楼艺术社团展区",
+              "type": "string"
+            }
+          }
+        },
+        "学期": {
+          "default": "2010-2011学年第一学期",
+          "type": "string"
+        },
+        "时代标签": {
+          "default": "2010年秋·按键机主流与早期智能机并存的校园网时代",
+          "type": "string"
+        }
+      }
+    },
+    "关系": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "好感度": {
+          "default": 0,
+          "type": "number"
+        },
+        "信任度": {
+          "default": 0,
+          "type": "number"
+        },
+        "阶段": {
+          "default": "陌生",
+          "type": "string",
+          "enum": [
+            "陌生",
+            "相识",
+            "朋友",
+            "暧昧",
+            "恋人"
+          ]
+        },
+        "当前关系": {
+          "default": "尚未正式认识",
+          "type": "string"
+        },
+        "可观察状态": {
+          "default": "在琴键前专注而从容，离开音乐以后又显得安静拘谨",
+          "type": "string"
+        }
+      }
+    },
+    "身份认知": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "玩家对向艺": {
+          "default": "未知",
+          "type": "string",
+          "enum": [
+            "未知",
+            "怀疑",
+            "确认"
+          ]
+        },
+        "向艺对玩家": {
+          "default": "未知",
+          "type": "string",
+          "enum": [
+            "未知",
+            "怀疑",
+            "确认"
+          ]
+        },
+        "玩家可见线索": {
+          "default": [],
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "向艺私有判断": {
+          "default": [],
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "音乐": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "当前焦点项目": {
+          "default": "未命名古风原创",
+          "type": "string"
+        },
+        "活动项目": {
+          "default": {},
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "description": "项目名"
+          },
+          "additionalProperties": {
+            "default": {},
+            "type": "object",
+            "properties": {
+              "类别": {
+                "default": "未记录",
+                "type": "string"
+              },
+              "阶段": {
+                "default": "未记录",
+                "type": "string"
+              },
+              "进度": {
+                "default": 0,
+                "type": "number"
+              },
+              "状态": {
+                "default": "未记录",
+                "type": "string"
+              }
+            }
+          }
+        },
+        "灵感碎片": {
+          "default": [],
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "名称": {
+                "default": "未命名灵感",
+                "type": "string"
+              },
+              "描述": {
+                "default": "",
+                "type": "string"
+              }
+            }
+          }
+        },
+        "项目归档": {
+          "default": [],
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "名称": {
+                "default": "未命名项目",
+                "type": "string"
+              },
+              "类别": {
+                "default": "未记录",
+                "type": "string"
+              },
+              "结果": {
+                "default": "未记录",
+                "type": "string"
+              },
+              "日期": {
+                "default": "未记录",
+                "type": "string"
+              },
+              "意义": {
+                "default": "未记录",
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "声名": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "网络知名度": {
+          "default": 22,
+          "type": "number"
+        },
+        "校园知名度": {
+          "default": 0,
+          "type": "number"
+        },
+        "网络公众印象": {
+          "default": "在古风原创小圈里有少量固定听众，名字略有眼熟，但更新不算稳定，听众几乎不了解本人",
+          "type": "string"
+        },
+        "校园公众印象": {
+          "default": "尚未在华央校园里留下可辨认的公众印象",
+          "type": "string"
+        }
+      }
+    },
+    "记忆": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "近期事件": {
+          "default": [],
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "关键里程碑": {
+          "default": [],
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "关系阶段摘要": {
+          "default": {},
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "description": "关系阶段"
+          },
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "学期摘要": {
+          "default": {},
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "description": "学期"
+          },
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
